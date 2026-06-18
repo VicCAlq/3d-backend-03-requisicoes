@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" />
+  <title>Prazer em lhe conhecer</title>
+</head>
+<body>
+  <h1>Formulário</h1>
+  <h3>Para prosseguir, nos envie as informações abaixo:</h3>
+  <form action="/res" method="GET" style="width: 450px;">
+    <label for="nome">Nome:</label><br>
+    <input type="text" id="nome" name="nome" required style="width: 420px"><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required style="width: 420px"><br>
+
+    <p>Escolha sua cor favorita:</p>
+    <section style="display: flex; flex-direction: row; gap: 20px">
+      <div>
+        <label><input type="radio" name="cor" value="verde limão" required> <span style="display:inline-block;width:12px;height:12px;background:#32CD32;"></span> verde limão</label><br>
+        <label><input type="radio" name="cor" value="verde musgo"> <span style="display:inline-block;width:12px;height:12px;background:#6B8E23;"></span> verde musgo</label><br>
+        <label><input type="radio" name="cor" value="verde oliva"> <span style="display:inline-block;width:12px;height:12px;background:#808000;"></span> verde oliva</label><br>
+        <label><input type="radio" name="cor" value="verde água"> <span style="display:inline-block;width:12px;height:12px;background:#00FFFF;"></span> verde água</label><br>
+        <label><input type="radio" name="cor" value="verde pálido"> <span style="display:inline-block;width:12px;height:12px;background:#98FB98;"></span> verde pálido</label><br>
+        <label><input type="radio" name="cor" value="verde pastel"> <span style="display:inline-block;width:12px;height:12px;background:#77DD77;"></span> verde pastel</label><br>
+      </div>
+      <div>
+        <label><input type="radio" name="cor" value="verde esmeralda"> <span style="display:inline-block;width:12px;height:12px;background:#50C878;"></span> verde esmeralda</label><br>
+        <label><input type="radio" name="cor" value="verde jade"> <span style="display:inline-block;width:12px;height:12px;background:#00A86B;"></span> verde jade</label><br>
+        <label><input type="radio" name="cor" value="verde mar"> <span style="display:inline-block;width:12px;height:12px;background:#2E8B57;"></span> verde mar</label><br>
+        <label><input type="radio" name="cor" value="verde celadão"> <span style="display:inline-block;width:12px;height:12px;background:#ACE1AF;"></span> verde celadão</label><br>
+        <label><input type="radio" name="cor" value="verde persa"> <span style="display:inline-block;width:12px;height:12px;background:#00A693;"></span> verde persa</label><br>
+        <label><input type="radio" name="cor" value="verde azulado"> <span style="display:inline-block;width:12px;height:12px;background:#0D98BA;"></span> verde azulado</label><br>
+      </div>
+      <div>
+        <label><input type="radio" name="cor" value="verde selva"> <span style="display:inline-block;width:12px;height:12px;background:#29AB87;"></span> verde selva</label><br>
+        <label><input type="radio" name="cor" value="verde menta"> <span style="display:inline-block;width:12px;height:12px;background:#98FF98;"></span> verde menta</label><br>
+        <label><input type="radio" name="cor" value="verde pinho"> <span style="display:inline-block;width:12px;height:12px;background:#01796F;"></span> verde pinho</label><br>
+        <label><input type="radio" name="cor" value="veridiano"> <span style="display:inline-block;width:12px;height:12px;background:#40826D;"></span> veridiano</label><br>
+        <label><input type="radio" name="cor" value="verdegris"> <span style="display:inline-block;width:12px;height:12px;background:#A2A9B0;"></span> verdegris</label><br>
+        <label><input type="radio" name="cor" value="verde turquesa"> <span style="display:inline-block;width:12px;height:12px;background:#A0D6D1;"></span> verde turquesa</label><br><br>
+      </div>
+    </section>
+
+    <div style="width: 100%; display: flex; flex-direction: row; justify-content: end;">
+      <button type="submit">Enviar</button>
+    </div>
+  </form>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" />
+  <title>Prazer em lhe conhecer</title>
+</head>
+<body>
+  <h1>Inscrição para torneio de SMASH</h1>
+  <h3>Para prosseguir, nos envie as informações abaixo:</h3>
+  <form action="/cadastro" method="GET">
+    <label for="nome">Nome:</label><br>
+    <input type="text" id="nome" name="nome" required style="width: 420px"><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required style="width: 420px"><br>
+
+    <p>Escolha seu controle:</p>
+    <section style="display: flex; flex-direction: row; gap: 10px">
+      <label><input type="radio" name="controle" value="joystick ps5" required>Joystick PS5</label><br>
+      <label><input type="radio" name="controle" value="joystick xbox">Joystick XBox</label><br>
+      <label><input type="radio" name="controle" value="joystick switch">Joystick Switch</label><br>
+      <label><input type="radio" name="controle" value="controle arcade">Controle arcade</label><br>
+      <label><input type="radio" name="controle" value="teclado">Teclado</label><br>
+    </section>
+
+    <p>Escolha 5 personagens:</p>
+    <section style="display: flex; flex-direction: row; gap: 10px">
+      <div style="display: flex; flex-direction: column">
+        <label><input type="checkbox" name="personagem" value="Mario">Mario</label>
+        <label><input type="checkbox" name="personagem" value="Luigi">Luigi</label>
+        <label><input type="checkbox" name="personagem" value="Peach">Peach</label>
+        <label><input type="checkbox" name="personagem" value="Daisy">Daisy</label>
+        <label><input type="checkbox" name="personagem" value="Bowser">Bowser</label>
+      </div>
+      <div style="display: flex; flex-direction: column">
+        <label><input type="checkbox" name="personagem" value="Sonic">Sonic</label>
+        <label><input type="checkbox" name="personagem" value="Knuckles">Knuckles</label>
+        <label><input type="checkbox" name="personagem" value="Shadow">Shadow</label>
+        <label><input type="checkbox" name="personagem" value="Tails">Tails</label>
+        <label><input type="checkbox" name="personagem" value="Amy">Amy</label>
+      </div>
+      <div style="display: flex; flex-direction: column">
+        <label><input type="checkbox" name="personagem" value="Eggman">Eggman</label>
+        <label><input type="checkbox" name="personagem" value="Kirby">Kirby</label>
+        <label><input type="checkbox" name="personagem" value="Meta Knight">Meta Knight</label>
+        <label><input type="checkbox" name="personagem" value="Mega Man">Mega Man</label>
+        <label><input type="checkbox" name="personagem" value="Zero">Zero</label>
+      </div>
+      <div style="display: flex; flex-direction: column">
+        <label><input type="checkbox" name="personagem" value="Fox">Fox</label>
+        <label><input type="checkbox" name="personagem" value="Pikachu">Pikachu</label>
+        <label><input type="checkbox" name="personagem" value="Jigglypuff">Jigglypuff</label>
+        <label><input type="checkbox" name="personagem" value="Mew">Mew</label>
+        <label><input type="checkbox" name="personagem" value="Mewtwo">Mewtwo</label>
+      </div>
+      <div style="display: flex; flex-direction: column">
+        <label><input type="checkbox" name="personagem" value="Ryu">Ryu</label>
+        <label><input type="checkbox" name="personagem" value="Ken">Ken</label>
+        <label><input type="checkbox" name="personagem" value="Chun Li">Chun Li</label>
+        <label><input type="checkbox" name="personagem" value="Cammy">Cammy</label>
+        <label><input type="checkbox" name="personagem" value="Samus">Samus</label>
+      </div>
+      <div style="display: flex; flex-direction: column">
+        <label><input type="checkbox" name="personagem" value="Link">Link</label>
+        <label><input type="checkbox" name="personagem" value="Zelda">Zelda</label>
+        <label><input type="checkbox" name="personagem" value="Toon Link">Toon Link</label>
+        <label><input type="checkbox" name="personagem" value="Simon Belmont">Simon Belmont</label>
+        <label><input type="checkbox" name="personagem" value="Richter Belmont">Richter Belmont</label>
+      </div>
+      <div style="display: flex; flex-direction: column">
+        <label><input type="checkbox" name="personagem" value="Falcon">Falcon</label>
+        <label><input type="checkbox" name="personagem" value="Robin">Robin</label>
+        <label><input type="checkbox" name="personagem" value="Lucina">Lucina</label>
+      </div>
+    </section><br><br>
+
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+</html>
