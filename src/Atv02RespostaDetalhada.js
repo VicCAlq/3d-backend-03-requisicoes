@@ -40,6 +40,8 @@
 const express = require('express')
 const app = express()
 const porta = 3000
+const path = require('path')
+const cors = require('cors');
 app.use(cors());
 app.use(express.static(path.join(__dirname, 'src')));
 
