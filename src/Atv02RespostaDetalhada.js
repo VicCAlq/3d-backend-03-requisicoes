@@ -35,3 +35,42 @@
   * Ao final deste arquivo, use "export default app" para
   * exportar o objeto do servidor para os testes automatizados.
   */
+
+
+import express from 'express';
+
+const app = express();
+
+app.get('/', (req, res) => {
+  res.sendFile('indexAtv.html', { root: './src' });
+});
+
+app.get('/cadastro', (req, res) => {
+
+  const { nome, email, controle, personagem } = req.query;
+
+  res.send(`<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" />
+  <title>Prazer em lhe conhecer</title>
+</head>
+<body>
+  <h1>Cadastro feito com sucesso!</h1>
+  <p><strong>Participante:</strong> ${nome}</p>
+  <p><strong>Email:</strong> ${email}</p>
+  <p><strong>Tipo de controle:</strong> ${controle}</p>
+  <p><strong>Personagens escolhidos:</strong></p>
+  <p>${personagem[0]}</p>
+  <p>${personagem[1]}</p>
+  <p>${personagem[2]}</p>
+  <p>${personagem[3]}</p>
+  <p>${personagem[4]}</p>
+</body>
+</html>`);
+});
+
+export default app;
