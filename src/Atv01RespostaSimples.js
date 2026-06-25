@@ -27,3 +27,43 @@
   * Ao final deste arquivo, use "export default app" para
   * exportar o objeto do servidor para os testes automatizados.
   */
+const express = require('express')
+const path = require('path')
+const cors = require('cors');
+
+// Selecionando a porta
+const porta = 3000
+
+const app = express()
+app.use(express.urlencoded({ extended: true }))
+app.use(express.json())
+app.use(cors());
+app.use(express.static(path.join(__dirname, 'src')));
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'indexAtv.html'))
+})
+app.get('/cadastro', (req, res) => {
+  if (!req.query.pero) {
+    res.status(400).json({ error: erro.message });
+    return
+  }
+  if (req.query) {
+    res.send(`<!DOCTYPE html>
+      <html lang="pt-BR">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="color-scheme" content="light dark"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" />
+        <title>Prazer em lhe conhecer</title>
+      </head>
+      <body>
+        <h1>Cadastro feito com sucesso!</h1>
+      </body>
+      </html>`)
+      
+    }
+  })
+
+export default app
