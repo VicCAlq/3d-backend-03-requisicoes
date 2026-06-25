@@ -70,4 +70,4 @@ app.listen(porta, () => {
   console.log(`Servidor rodando em http://localhost:${porta}`)
 })
 
-export default app
+module.exports = app
