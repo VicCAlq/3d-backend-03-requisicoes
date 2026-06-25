@@ -35,10 +35,10 @@ app.get('/', (req, res) => {
 app.get('/cadastro', (req, res) => {
    const { nome, email, controle, personagem } = req.query
    if( req.query.personagem>5);{
-       console.log("Quantidade de personagens escolhida superior ao necessário(5)")
+       res.json({ mensagem: "Quantidade de personagens escolhida superior ao necessário(5)"})
     }
     if( req.query.personagem<5);{
-       console.log("Quantidade de personagens escolhida inferior ao necessário (5)")
+       res.json({ mensagem: "Quantidade de personagens escolhida inferior ao necessário (5)"})
     }
   if (req.query) {
     res.send(`<!DOCTYPE html>
