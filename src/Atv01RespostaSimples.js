@@ -6,7 +6,7 @@
   * o arquivo "indexAtv.html" deve ser enviado.
   *
   * A segunda rota deve ter o endereço "/cadastro".
-  * Ela é acessada quando o formulário do "indexAtv.html"
+  * Ela é acessada quando o formuláriao do "indexAtv.html"
   * é enviado. Quando esta rota for acessada, ela deve
   * retornar a resposta abaixo:
   *
