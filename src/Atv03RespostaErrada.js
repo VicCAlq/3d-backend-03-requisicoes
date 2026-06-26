@@ -19,7 +19,6 @@
   * exportar o objeto do servidor para os testes automatizados.
   */
 
-
 const express = require('express')
 const app = express()
 const porta = 3000
@@ -32,6 +31,17 @@ app.get('/', (req, res) => {
 
 app.get('/cadastro', (req, res) => {
    const { nome, email, controle, personagem } = req.query
+
+  if (personagem > 5) {
+    res.json({ error: "Quantidade de personagens escolhida superior ao necessário (5)" });
+    return
+  }
+
+   if (personagem < 5) {
+    res.json({ error: "Quantidade de personagens escolhida inferior ao necessário (5)" });
+    return
+  }
+  
   if(req.query) {
 res.send(`<!DOCTYPE html>
 <html lang="pt-BR">
@@ -56,10 +66,6 @@ res.send(`<!DOCTYPE html>
 </body>
 </html>
   `)
-    if (!req.body) {
-    res.status(400).json({ error: erro.message });
-    return
-  }
   }
 })
 
