@@ -35,3 +35,32 @@
   * Ao final deste arquivo, use "export default app" para
   * exportar o objeto do servidor para os testes automatizados.
   */
+const express = require('express');
+const path = require('path')
+const cors = require('cors')
+const app = express();
+const porta = 3000;
+app.use(express.urlencoded({extended: true}))
+app.use(express.json());
+app.use(cors());
+app.use(express.static(path.join(__dirname, 'src')));
+const { nome, email, cor } = req.query
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'indexAtv.html'))
+})
+
+app.get('/cadastro', (req, res) => {
+
+  const { nome, email, controle, personagem } = req.query
+  if(req.query) {
+    res.send();
+  }
+    
+});
+
+app.listen(porta, () => {
+  console.log(`Servidor rodando em http://localhost:${porta}`)
+})
+
+module.exports = app
