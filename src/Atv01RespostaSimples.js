@@ -34,7 +34,7 @@ const cors = require('cors');
 
 const porta = 3000
 const app = express()
-app.use(express.static({extended:true}))
+app.use(express.urlencoded({ extended: true }))
 app.use(cors());
 app.use(express.static(path.join(__dirname, 'src')));
 
@@ -42,7 +42,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'indexAtv.html'))
 })
 
-app.get('/cadastro', (res, req) => {
+app.get('/cadastro', (req, res) => {
   res.send(`<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -61,3 +61,5 @@ app.get('/cadastro', (res, req) => {
 app.listen(porta, () => {
   console.log(`Servidor rodando em http://localhost:${porta}`)
 })
+
+export default app
