@@ -35,32 +35,19 @@
   * Ao final deste arquivo, use "export default app" para
   * exportar o objeto do servidor para os testes automatizados.
   */
-import express from 'express';
-import path from 'path';
-
+const express = require('express');
+const path = require('path');
 const app = express();
-const __dirname = path.resolve();
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'indexAtv.html'));
-});
+  res.sendFile(path.join(__dirname, 'indexAtv.html'))
+})
 
 app.get('/cadastro', (req, res) => {
-    const { nome, email, controle } = req.query;
-
-    let personagens = [];
-    if (req.query.personagem) {
-        personagens = Array.isArray(req.query.personagem) 
-            ? req.query.personagem 
-            : [req.query.personagem];
-    }
-    const p1 = personagens[0] ? `<p>${personagens[0]}</p>` : '';
-    const p2 = personagens[1] ? `<p>${personagens[1]}</p>` : '';
-    const p3 = personagens[2] ? `<p>${personagens[2]}</p>` : '';
-    const p4 = personagens[3] ? `<p>${personagens[3]}</p>` : '';
-    const p5 = personagens[4] ? `<p>${personagens[4]}</p>` : '';
-
-    res.send(`<!DOCTYPE html>
+ const { nome, email, controle, personagem } = req.query;
+  console.log(req)
+ 
+res.send(`<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
@@ -81,7 +68,7 @@ app.get('/cadastro', (req, res) => {
   <p>${personagem[3]}</p>
   <p>${personagem[4]}</p>
 </body>
-</html>`);
+</html>`)
 });
 
-export default app;
+export default app
