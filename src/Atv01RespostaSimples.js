@@ -27,6 +27,9 @@
   * Ao final deste arquivo, use "export default app" para
   * exportar o objeto do servidor para os testes automatizados.
   */
+const express = require('express');
+const path = require('path');
+const app = express();
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'indexAtv.html'))
@@ -34,11 +37,6 @@ app.get('/', (req, res) => {
 
 app.get('/cadastro', (req, res) => {
   console.log(req)
-
-  if (!req.query) {
-    res.status(400).json({ error: erro.message });
-    return
-   
 res.send(`<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
