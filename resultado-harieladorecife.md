@@ -1,0 +1,18 @@
+Data de atualização: Dia 27/8/2026 às 11:45 
+
+| Questão | Teste | Entregue | Correto | Mensagem de Erro |
+|---------|-------|----------|---------|------------------|
+| Atividade 01 - Resposta simples | GET / envia o formulário indexAtv.html | ✅ | ❌ | TypeError: Cannot read properties of undefined (reading 'address') |
+| Atividade 01 - Resposta simples | GET /cadastro retorna a mensagem de sucesso | ✅ | ❌ | TypeError: Cannot read properties of undefined (reading 'address') |
+| Atividade 01 - Resposta simples | GET /cadastro não exige informações do usuário | ✅ | ❌ | TypeError: Cannot read properties of undefined (reading 'address') |
+| Atividade 02 - Resposta detalhada | GET / envia o formulário indexAtv.html | ✅ | ✅ | Sem erros |
+| Atividade 02 - Resposta detalhada | GET /cadastro reflete as informações preenchidas | ✅ | ✅ | Sem erros |
+| Atividade 02 - Resposta detalhada | GET /cadastro lista cada um dos cinco personagens escolhidos | ✅ | ✅ | Sem erros |
+| Atividade 03 - Resposta errada | GET /cadastro com exatamente 5 personagens retorna sucesso | ✅ | ✅ | Sem erros |
+| Atividade 03 - Resposta errada | GET /cadastro com menos de 5 personagens informa erro | ✅ | ✅ | Sem erros |
+| Atividade 03 - Resposta errada | GET /cadastro sem personagens informa erro | ✅ | ❌ | AssertionError: expected '<!DOCTYPE html>\n<html lang="en">\n<h…' to contain 'Quantidade de personagens escolhida i…' |
+| Atividade 03 - Resposta errada | GET /cadastro com mais de 5 personagens informa erro | ✅ | ✅ | Sem erros |
+| Atividade 04 - Resposta status | GET /cadastro com exatamente 5 personagens retorna sucesso | ✅ | ❌ | AssertionError: expected '\n        <!DOCTYPE html>\n    <html …' to contain 'Mario' |
+| Atividade 04 - Resposta status | GET /cadastro com menos de 5 personagens retorna status 422 | ✅ | ❌ | AssertionError: expected 200 to be 422 // Object.is equality |
+| Atividade 04 - Resposta status | GET /cadastro sem personagens retorna status 422 | ✅ | ❌ | AssertionError: expected 200 to be 422 // Object.is equality |
+| Atividade 04 - Resposta status | GET /cadastro com mais de 5 personagens retorna status 422 | ✅ | ❌ | AssertionError: expected 200 to be 422 // Object.is equality |
