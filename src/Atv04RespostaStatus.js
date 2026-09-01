@@ -23,3 +23,26 @@
   * Ao final deste arquivo, use "export default app" para
   * exportar o objeto do servidor para os testes automatizados.
   */
+
+
+import express from 'express';
+
+const app = express();
+
+app.get('/', (req, res) => {
+  res.sendFile('indexAtv.html', { root: './src' });
+});
+
+app.get('/cadastro', (req, res) => {
+  const personagens = req.query.personagem || [];
+
+  if (personagens.length > 5) {
+    res.status(422).send('Quantidade de personagens escolhida superior ao necessário (5)');
+  } else if (personagens.length < 5) {
+    res.status(422).send('Quantidade de personagens escolhida inferior ao necessário (5)');
+  } else {
+    res.send('Cadastro feito com sucesso!');
+  }
+});
+
+export default app;
